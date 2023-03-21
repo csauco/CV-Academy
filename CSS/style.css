@@ -1,0 +1,543 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Partículas de animación de fondo*/
+.particles-js-canvas-el {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+/* Partículas de animación de fondo*/
+
+
+/*Estructura principal*/
+body {
+    background: rgb(149, 150, 150);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+}
+.container {
+    z-index: 2;
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 1000px;
+    margin: 50px;  
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    box-shadow: 0 35px 55px rgba(0, 0, 0, 1)
+}
+
+/*Estructura principal*/
+
+/*LADO IZQUIERDO*/
+.container .left_side {
+    position: relative;
+    background: #003147;
+    padding: 40px;
+    padding-top: 20px;
+
+}
+/* Esto es sección botones utilidad*/
+.utility {
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+    top: 0;
+    margin-bottom: 10px;
+}
+.utility_button{
+    position: relative;
+    background: none;
+    outline: none;
+    border: none;
+    margin: 0px 10px 20px;
+    display: flex;
+    font-size: 1.8em;
+    cursor: pointer;
+    color: #03a9f4;
+}
+
+.theme_button {
+
+        position: relative;
+        background: none;
+        outline: none;
+        border: none;
+        margin: 0px 10px 20px;
+        display: flex;
+        font-size: 1.8em;
+        cursor: pointer;
+}
+
+
+
+.title {
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+/*Esto es sección perfil*/
+
+.profile_text {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);  
+}
+.profile_text .image_box {
+    position: relative;
+    width: 180px;
+    height: 220px;
+    overflow: hidden;
+    box-shadow:
+#03a9f4 0 0 0 3px, 
+#115d81 0 0 0 8px;
+}
+.profile_text .image_box img {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+.profile_text h1 {
+    color: #fff;
+    font-size: 1.3em;
+    margin-top: 15px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+
+}
+
+.profile_text h2, h3 {
+    color: #e1e1e1;
+    position: relative;
+    font-size: 1em;
+    font-weight: 100;
+    letter-spacing: 1.5px;
+    text-align: center;
+    padding: 5px;
+
+}
+.profile_text h2 {
+    padding-bottom: 10px;
+}
+.profile_text h2 .dot {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color:rgba(255, 255, 255, 0.2);
+}
+/*Esto es sección perfil*/
+
+/*Esto es sección contacto*/
+.contact_info {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); 
+
+}
+
+.contact_info ul li {
+    letter-spacing: -1.5px;
+    word-spacing: 2px;
+    position:relative;
+    list-style: none;
+    margin: 8px -20px;
+    
+
+}
+.contact_info  a {
+    text-decoration: none;
+    color: #e1e1e1;
+}
+
+.contact_info ul li .icon {
+    display:inline-block;
+    width: 20px;
+    font-size: 18px;
+    color: #03a9f4;
+}
+/*Esto es sección contacto*/
+
+
+/*Esto es sección aptitudes*/
+.skills_info {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); 
+}
+.skills_info ul li {
+    list-style: none;
+    color: #e1e1e1;
+    padding-bottom: 15px;
+}
+.skills_info .progress {
+    position: relative;
+    width: 100%;
+    height: 6px;
+    background: #081921;
+    display: block;
+    margin-top: 5px;
+}
+.skills_info .progress div {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #03a9f4;
+}
+/*Esto es sección aptitudes*/
+
+
+/* esto es sección herramientas*/
+.tools_info {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); 
+}
+.tools_info .list {
+    list-style: none;
+    text-align: center;
+    position: relative;
+    column-count: 3;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0; 
+}
+
+.tools_info .tools_icon {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.tools_info .tools_icon img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.tools_info .tools_icon .color-icon_css {
+    clip-path: inset(40% 0 0 0);   
+}
+.tools_info .tools_icon .color-icon_git {
+    clip-path: inset(70% 0 0 0);   
+}.tools_info .tools_icon .color-icon_html {
+    clip-path: inset(25% 0 0 0);   
+}.tools_info .tools_icon .color-icon_js {
+    clip-path: inset(60% 0 0 0);   
+}.tools_info .tools_icon .color-icon_m365 {
+    clip-path: inset(35% 0 0 0);   
+}.tools_info .tools_icon .color-icon_ps {
+    clip-path: inset(60% 0 0 0);   
+}
+
+/* Esto es sección herramientas*/
+
+
+/*Esto es sección idioma */
+.idiom_info {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.idiom_info ul li {
+    list-style: none;
+    color: #fff;
+    padding-bottom: 15px;
+}
+.idiom_info .progress {
+    position: relative;
+    width: 100%;
+    height: 6px;
+    background: #081921;
+    display: block;
+    margin-top: 5px;
+}
+.idiom_info .progress div {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #03a9f4;
+}
+/*Esto es sección idioma */
+
+
+/* Esto es sección datos interesantes*/
+.interest_data_info {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); 
+}
+.interest_data_info ul li {
+    color: #e1e1e1;
+    letter-spacing: -1px;
+    word-spacing: 2px;
+    position:relative;
+    list-style: none;
+    margin: 8px -20px;
+}
+
+.interest_data_info .icon {
+    color: #03a9f4;
+    margin: 0px 10px 0px 0px;
+}
+/* Esto es sección datos interesantes*/
+
+/*LADO IZQUIERDO*/
+
+
+/*LADO DERECHO*/
+.container .right_side {
+    position: relative;
+    background: #fff;
+    padding: 40px;
+}
+.about {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #115e81bc 
+}
+.about:last-child {
+    margin-bottom: 0;
+}
+.title2 {
+    color: #003147;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+p {
+    color: #333;
+}
+
+.about .box {
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0px;
+}
+.about .box .year_company {
+    min-width: 150px;
+    
+
+}
+.about .box .year_company h5 {
+    text-transform: uppercase;
+    color:#848c90;
+    font-weight: 600;
+    padding-right: 20px;
+    
+}
+.about .box .year_company h5:last-child{
+    padding-top: 5px;
+}
+.about .box .text h4 {
+    text-transform:uppercase;
+    color:#2a7da2;
+    font-size: 16px;
+    margin-bottom: 10px;
+    
+}
+
+
+/*LADO DERECHO*/
+
+/* Dark mode*/
+
+/* Estructura principal*/
+.dark-mode {
+    background-color: #222;
+}
+
+.dark-mode .container{
+    box-shadow: 0 35px 55px rgb(90, 90, 90);
+}
+
+.dark-mode .left_side {
+    background-color: #081921;
+}
+
+.dark-mode .right_side {
+    background-color:#1b1b1b;
+}
+/* Estructura principal*/
+
+
+/* Left side */
+.dark-mode #dark_switch{
+    color: rgb(215, 215, 58);
+
+}
+.dark-mode .skills_info .progress div {
+    background-color:#e1e1e1;
+}
+
+.dark-mode .skills_info .progress {
+    background-color: #115d81;
+}
+.dark-mode .idiom_info .progress div{
+    background-color:#e1e1e1;
+}
+.dark-mode .idiom_info .progress {
+    background-color: #115d81;
+}
+
+/* Left side */
+
+/*Right side */
+.dark-mode .about .title2 {
+    color: #fff;
+}
+
+.dark-mode p {
+    color: #e1e1e1;
+}
+
+.dark-mode .about .box .year_company h5 {
+    color:#e1e1e1;
+    font-weight: lighter;
+}
+
+.dark-mode .about .box .text h4 {
+    color:#03a9f4;
+}
+/*Right side */
+
+.dark-mode .popup {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 1);
+}
+
+/* Dark mode*/
+
+.popup {
+    display: none;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    padding: 20px;
+    background-color:#003147;
+    border-radius: 5%;
+    border: 2px solid #115d81;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 1);
+    z-index: 3;
+}
+
+.popup ul {
+    margin: 0;
+    padding: 0;
+}
+
+.popup ul li {
+    word-spacing: 2px;
+    position:relative;
+    list-style: none;
+    margin: 10px 0;
+    text-align: center;
+
+}
+
+.popup  a {
+    text-decoration: none;
+    color: #e1e1e1;
+    text-align: center;
+}
+
+
+#popup_close {
+    background-color:#03a9f4;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#popup_close:hover {
+    background-color:#115d81;
+}
+
+
+.popup .popup_div {
+    text-align: center;
+}
+
+/*Responsive*/
+@media (max-width: 800px) {
+    .container {
+        margin: 15px 30px;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .tools_info .list {
+        justify-content: space-around
+    }
+    .tools_info .tools_icon {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .contact_info ul li {
+        padding-bottom: 15px;
+        margin: 0;
+    }
+    .popup {
+        top: 20%;
+    }
+}
+
+
+
+
+@media (max-width: 550px) {
+    .container {
+        margin: 5px;
+    }
+    .about .box{
+        flex-direction: column;
+    }
+    .about .box .year_company {
+        min-width: 150px;
+        margin-bottom: 5px;
+    }
+    .popup {
+        top: 15%;
+        width: 250px;
+        padding: 15px;
+    }
+}
+
+/*Responsive*/
